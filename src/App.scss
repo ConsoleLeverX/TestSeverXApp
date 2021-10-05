@@ -1,0 +1,112 @@
+.app {
+  padding: 2rem 6rem 0;
+  height: 100vh;
+  background: #d8e4f3;
+
+  .table-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background: linear-gradient(
+      90deg,
+      rgba(246, 246, 246, 1) 0%,
+      rgba(230, 230, 230, 1) 30%,
+      rgba(240, 243, 244, 1) 100%
+    );
+    border: 1px solid #d1d1d1;
+    border-radius: 20px;
+    padding: 40px 0;
+    -webkit-box-shadow: 1px 6px 77px -12px rgba(34, 60, 80, 0.15);
+    -moz-box-shadow: 1px 6px 77px -12px rgba(34, 60, 80, 0.15);
+    box-shadow: 1px 6px 77px -12px rgba(34, 60, 80, 0.15);
+
+    .table-wrapper {
+      width: 80%;
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 1em;
+        overflow: hidden;
+
+        thead {
+          border-radius: 20px;
+
+          tr {
+            background-color: #2b3048;
+            color: white;
+            text-align: center;
+          }
+        }
+
+        tbody {
+          background: #fcfcfc;
+
+          .children-row {
+            background: #e7e7e7;
+          }
+
+          tr,
+          td {
+            color: darkgrey;
+            text-align: center;
+            border-right: 1px solid rgb(243, 243, 243);
+
+
+            .arrow {
+              cursor: pointer;
+            }
+          }
+        }
+
+        tr {
+          :last-child {
+            td {
+              border-bottom: 0;
+            }
+          }
+        }
+
+        th,
+        td {
+          margin: 0;
+          padding: 0.5rem;
+
+          :last-child {
+            border-right: 0;
+          }
+        }
+      }
+    }
+
+    .filter {
+      padding: 0 20px;
+
+      hr {
+        border: none;
+        color: #d1d1d1;
+        background-color: #d1d1d1;
+        height: 1px;
+      }
+
+      .label {
+        border-radius: 10px;
+        padding: 5px 12px;
+        color: whitesmoke;
+        display: inline-block;
+      }
+
+      .sort-label {
+        background: #faa745;
+      }
+
+      .filter-label {
+        background: #00d463;
+      }
+
+      .sort-type-label {
+        background: #5fbeed;
+      }
+    }
+  }
+}
